@@ -108,7 +108,7 @@
                 </div>
             </div>
             <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-                <img class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full" src="https://scontent-frt3-1.xx.fbcdn.net/v/t1.0-9/83109545_101221251436630_8076325678141669376_o.jpg?_nc_cat=108&_nc_sid=dd9801&_nc_ohc=70t4WsWFlKYAX-j611Q&_nc_ht=scontent-frt3-1.xx&oh=32cd2a74ac2d788b5ddd3c2e29d6be7a&oe=5EA02783" alt="" />
+                <img class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full" src="{{ asset('header.jpg') }}" alt="" />
             </div>
         </div>
 
