@@ -1,5 +1,7 @@
 @extends('layouts.web')
 
+@section('title', 'Kontakt')
+
 @section('content')
 <div class="container mt-20 px-6 md:px-0 max-w-3xl mx-auto">
     <div class="text-center md:text-left">
