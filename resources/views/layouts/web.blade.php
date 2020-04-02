@@ -15,6 +15,16 @@
 
     <!-- Styles -->
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
+    <style>
+        hr {
+            border: 0;
+            height: 1px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            background-image: linear-gradient(to right, rgba(8, 197, 70, 0), rgba(8, 197, 70, 0.75), rgba(8, 197, 70, 0));
+        }
+    </style>
     @stack('styles')
 
     <!-- Fonts -->
@@ -47,7 +57,7 @@
                             <div class="hidden md:block md:ml-10 md:pr-4">
                                 <a href="{{ route('home') }}#modell" class="font-medium text-gray-600 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out">Das Modell</a>
                                 <a href="{{ route('home') }}#vielfalt" class="ml-8 font-medium text-gray-600 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out">Vielfältigkeit</a>
-                                <a href="{{ route('home') }}#kontakt" class="ml-8 font-medium text-green-600 hover:text-green-700 focus:outline-none focus:text-green-700 transition duration-150 ease-in-out">Kontakt</a>
+                                <a href="{{ route('contact') }}" class="ml-8 font-medium text-green-600 hover:text-green-700 focus:outline-none focus:text-green-700 transition duration-150 ease-in-out">Kontakt</a>
                             </div>
                         </nav>
                     </div>
@@ -70,7 +80,7 @@
                                 <div class="px-2 pt-2 pb-3">
                                     <a href="{{ route('home') }}#modell" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:text-gray-900 focus:bg-gray-100 transition duration-150 ease-in-out">Das Modell</a>
                                     <a href="{{ route('home') }}#vielfalt" class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:text-gray-900 focus:bg-gray-100 transition duration-150 ease-in-out">Vielfältigkeit</a>
-                                    <a href="{{ route('home') }}#kontakt" class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-green-600 hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:text-gray-900 focus:bg-gray-100 transition duration-150 ease-in-out">Kontakt</a>
+                                    <a href="{{ route('contact') }}" class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-green-600 hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:text-gray-900 focus:bg-gray-100 transition duration-150 ease-in-out">Kontakt</a>
                                 </div>
                             </div>
                         </div>
@@ -125,9 +135,10 @@
 
         @yield('content')
 
+        @if(!request()->routeIs('contact'))
         <section class="bg-gray-100">
             <div class="container">
-                <div class="max-w-screen-xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
+                <div class="max-w-screen-xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex md:items-center lg:justify-between">
                     <h2 class="text-3xl leading-9 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10 text-center md:text-left">
                         Überzeugt?
                         <br />
@@ -135,7 +146,7 @@
                     </h2>
                     <div class="flex lg:flex-shrink-0 lg:mt-0 justify-center">
                         <div class="inline-flex">
-                            <a href="#" class="group py-3 px-8 border border-transparent text-base leading-6 font-semibold uppercase rounded-full text-green-600 hover:text-white bg-green-200 hover:bg-green-600 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">
+                            <a href="{{ route('contact') }}" class="group py-3 px-8 border border-transparent text-base leading-6 font-semibold uppercase rounded-full text-green-600 hover:text-white bg-green-200 hover:bg-green-600 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">
                                 <span class="hidden group-hover:inline-block">
                                     <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-6 h-6 inline-flex -mt-1">
                                         <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
@@ -159,6 +170,7 @@
                 </div>
             </div>
         </section>
+        @endif
     </main>
 
     <footer class="bg-gray-900 text-center text-gray-400 text-sm py-2" role="contentinfo">

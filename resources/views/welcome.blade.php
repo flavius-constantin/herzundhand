@@ -2,15 +2,6 @@
 
 @push('styles')
 <style>
-    hr {
-        border: 0;
-        height: 1px;
-        max-width: 500px;
-        margin-left: auto;
-        margin-right: auto;
-        background-image: linear-gradient(to right, rgba(8, 197, 70, 0), rgba(8, 197, 70, 0.75), rgba(8, 197, 70, 0));
-    }
-
     /* Background Pattern
      *  Hero Patterns (https: //www.heropatterns.com)
      *  by Steve Schoger (https://twitter.com/steveschoger)
@@ -24,10 +15,10 @@
 
 @section('content')
 <section id="modell" class="container mt-20 px-6 md:px-0">
-    <h3 class="text-center text-3xl leading-8 font-extrabold text-gray-800 sm:text-4xl sm:leading-10">
+    <h3 class="text-center md:text-left max-w-3xl mx-auto text-3xl leading-8 font-extrabold text-gray-800 sm:text-4xl sm:leading-10">
         Unsere Mission
     </h3>
-    <p class="text-center uppercase text-green-600 font-bold text-sm -mt-4">
+    <p class="text-center md:text-left max-w-3xl mx-auto uppercase text-green-600 font-bold text-sm -mt-4">
         Das Modell der 24 Stunden Pflege
     </p>
     <p class="text-center md:text-left mt-4 max-w-3xl mx-auto text-lg leading-relaxed text-gray-600">
@@ -41,7 +32,7 @@
 
 <hr>
 
-<section id="vielfalt" class="container text-center mt-20">
+<section id="vielfalt" class="container text-center md:text-left max-w-3xl mx-auto mt-20">
     <h3 class="text-3xl leading-8 font-extrabold text-gray-800 sm:text-4xl sm:leading-10">
         Vielf&auml;ltigkeit
     </h3>
@@ -192,7 +183,9 @@
             <!-- <div class="text-green-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 shadow-lg rounded-full bg-green-300">
                             <i class="fas fa-rocket text-xl"></i>
                         </div> -->
-            <h3 class="text-3xl font-semibold text-gray-900">Führen des Haushaltes</h3>
+            <h3 class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-800 sm:text-4xl sm:leading-10">
+                Führen des Haushaltes
+            </h3>
             <p class="mt-4 text-lg leading-relaxed text-gray-600">
                 The extension comes with three pre-built pages to help you get
                 started faster. You can change the text and images and you're
