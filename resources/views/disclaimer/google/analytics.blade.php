@@ -129,8 +129,9 @@
     <li><strong>Ablaufdatum:</strong> nach 2 Jahre</li>
 </ul>
 <div class="border border-l-4 border-orange-400 bg-orange-100 px-6 mb-6 rounded-lg">
-    <p>
-        <strong>Anmerkung:</strong> Diese Aufzählung kann keinen Anspruch auf Vollständigkeit erheben, da Google die Wahl ihrer Cookies immer wieder auch verändert.
+    <p class="text-sm">
+        <span class="font-bold">Anmerkung: </span>
+        Diese Aufzählung kann keinen Anspruch auf Vollständigkeit erheben, da Google die Wahl ihrer Cookies immer wieder auch verändert.
     </p>
 </div>
 <p>
