@@ -207,7 +207,7 @@
             <p class="w-1/2">
                 <a href="#" title="Impressum" class="text-gray-400 hover:text-green-600">Impressum</a>
                 &bull;
-                <a href="#" title="Datenschutz" class="text-gray-400 hover:text-green-600">Datenschutz</a>
+                <a href="{{ route('disclaimer') }}" title="Datenschutz" class="text-gray-400 hover:text-green-600">Datenschutz</a>
             </p>
         </div>
 
