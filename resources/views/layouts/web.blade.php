@@ -5,7 +5,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>{{ config('app.name', 'Laravel') }} &bull; @yield('title', 'Startseite')</title>
 
     <!-- Google Tag Manager -->
     <script>
@@ -26,9 +25,13 @@
     </script>
     <!-- End Google Tag Manager -->
 
+    <!-- Title -->
+    <title>{{ config('app.name', 'Laravel') }} &bull; @yield('title', 'Startseite')</title>
+
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
+    <!-- SEO -->
     @include('includes/_seo')
     @include('includes/_favicon')
 
@@ -80,8 +83,8 @@
                             </div>
 
                             <div class="hidden md:block md:ml-10 md:pr-4">
-                                <a href="{{ route('home') }}#modell" class="font-medium text-gray-600 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out">Das Modell</a>
-                                <a href="{{ route('home') }}#vielfalt" class="ml-8 font-medium text-gray-600 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out">Vielfältigkeit</a>
+                                <a href="#modell" class=" font-medium text-gray-600 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out">Das Modell</a>
+                                <a href="#vielfalt" class=" ml-8 font-medium text-gray-600 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out">Vielfältigkeit</a>
                                 <a href="{{ route('contact') }}" class="ml-8 font-medium text-green-600 hover:text-green-700 focus:outline-none focus:text-green-700 transition duration-150 ease-in-out">Kontakt</a>
                             </div>
                         </nav>
@@ -103,8 +106,8 @@
                                     </div>
                                 </div>
                                 <div class="px-2 pt-2 pb-3">
-                                    <a href="{{ route('home') }}#modell" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:text-gray-900 focus:bg-gray-100 transition duration-150 ease-in-out">Das Modell</a>
-                                    <a href="{{ route('home') }}#vielfalt" class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:text-gray-900 focus:bg-gray-100 transition duration-150 ease-in-out">Vielfältigkeit</a>
+                                    <a href="#modell" class=" block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:text-gray-900 focus:bg-gray-100 transition duration-150 ease-in-out">Das Modell</a>
+                                    <a href="#vielfalt" class=" mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:text-gray-900 focus:bg-gray-100 transition duration-150 ease-in-out">Vielfältigkeit</a>
                                     <a href="{{ route('contact') }}" class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-green-600 hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:text-gray-900 focus:bg-gray-100 transition duration-150 ease-in-out">Kontakt</a>
                                 </div>
                             </div>
@@ -165,7 +168,7 @@
             <div class="container">
                 <div class="max-w-screen-xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex md:items-center lg:justify-between">
                     <h2 class="text-3xl leading-9 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10 text-center md:text-left">
-                        Überzeugt?
+                        <span id="contact-title"></span>
                         <br />
                         <span class="text-green-600">Schreiben Sie uns an!</span>
                     </h2>
@@ -201,7 +204,7 @@
     <footer class="bg-gray-900 text-center text-gray-400 text-sm py-2" role="contentinfo">
         <div id="kontakt" class="flex justify-between">
             <p class="w-1/2">
-                &copy; <a href="https://herzundhand24.de" title="Herz&amp;Hand24 Website" class="text-gray-400 hover:text-green-600">Herz&amp;Hand</a> {{ date('Y') }}
+                &copy; <a href="{{ config('app.url') }}" title="{{ config('app.name') }} Website" class="text-gray-400 hover:text-green-600">{{ config('app.name') }}</a> {{ date('Y') }}
             </p>
 
             <p class="w-1/2">
@@ -211,24 +214,25 @@
             </p>
         </div>
 
-        <!--
-        <ul class="flex flex-col md:flex-row justify-center list-none">
-            <li class="md:mr-2">
-                &copy; <a href="https://herzundhand24.de" title="Herz&amp;Hand24 Website" class="text-white">Herz&amp;Hand</a> {{ date('Y') }}.
-            </li>
-
-            <li>
-                Built with <a href="http://jigsaw.tighten.co" title="Jigsaw by Tighten" class="text-white">Jigsaw</a>
-                and <a href="https://tailwindcss.com" title="Tailwind CSS, a utility-first CSS framework" class="text-white">Tailwind CSS</a>.
-            </li>
-        </ul>
-    -->
     </footer>
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.0.1/dist/alpine.js" defer></script>
     <script src="{{ mix('js/app.js') }}"></script>
     @stack('scripts')
+    @if(!request()->routeIs('contact'))
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+    <script>
+        var typed = new Typed('#contact-title', {
+            strings: ["Fragen?", "Interessiert?", "Überzeugt?"],
+            typeSpeed: 70,
+            backSpeed: 20,
+            backDelay: 1500,
+            startDelay: 0,
+            loop: true
+        });
+    </script>
+    @endif
 </body>
 
 </html>
