@@ -5,13 +5,7 @@
 @section('content')
 <section class="mt-20 px-6 md:px-0 max-w-3xl mx-auto leading-relaxed text-gray-600">
     <div class="container">
-        <h3 class="text-3xl leading-8 font-extrabold text-gray-800 sm:text-4xl sm:leading-10">
-            Impressum
-        </h3>
-        <p class="uppercase text-green-600 font-bold text-sm -mt-4">
-            Informationspflicht laut §5 E-Commerce Gesetz, §14 Unternehmensgesetzbuch, §63 Gewerbeordnung und Offenlegungspflicht laut §25 Mediengesetz
-        </p>
-
+        <x-page-title title="Impressum" sub="Informationspflicht laut §5 E-Commerce Gesetz, §14 Unternehmensgesetzbuch, §63 Gewerbeordnung und Offenlegungspflicht laut §25 Mediengesetz" />
         <ul class="list-none ml-6">
             <li><strong>{{ config('app.name') }}</strong></li>
             <li>Kirchrimbach 5</li>
@@ -79,7 +73,7 @@
             Sollten Sie auf dieser Webseite Inhalte finden, die das Urheberrecht verletzen, bitten wir Sie uns zu kontaktieren.
         </p>
 
-        <!-- <hr>
+            <!-- <hr>
         <h3 class="text-xl font-extrabold text-gray-800  sm:text-2xl md:-mb-4 -mb-1">
             Bildernachweis
         </h3>

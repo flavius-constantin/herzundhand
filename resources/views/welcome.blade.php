@@ -15,12 +15,7 @@
 
 @section('content')
 <section id="modell" class="container mt-20 px-6 md:px-0">
-    <h3 class="text-center md:text-left max-w-3xl mx-auto text-3xl leading-8 font-extrabold text-gray-800 sm:text-4xl sm:leading-10">
-        Unsere Mission
-    </h3>
-    <p class="text-center md:text-left max-w-3xl mx-auto uppercase text-green-600 font-bold text-sm -mt-4">
-        Das Modell der 24 Stunden Pflege
-    </p>
+    <x-page-title title="Unsere Mission" sub="Das Modell der 24 Stunden Pflege" />
     <p class="text-center md:text-left mt-4 max-w-3xl mx-auto text-lg leading-relaxed text-gray-600">
         Das Modell der 24 Stunden Pflege zu Hause bietet Ihren hilfebedürftigen Angehörigen professionelle Unterstützung im Alltag und entlastet Sie von den vielfältigen und zeitintensiven Aufgaben, die eine professionelle Rundumbetreuung mit sich bringt. Erfahrene osteuropäische Betreuungs- und Pflegekräfte aus Rumänien kümmern sich fürsorglich um die Bedürfnisse Ihrer liebsten.
     </p>
@@ -33,12 +28,7 @@
 <hr>
 
 <section id="vielfalt" class="container text-center md:text-left max-w-3xl mx-auto mt-20">
-    <h3 class="text-3xl leading-8 font-extrabold text-gray-800 sm:text-4xl sm:leading-10">
-        Vielf&auml;ltigkeit
-    </h3>
-    <p class="uppercase text-green-600 font-bold text-sm -mt-4">
-        Wir unterst&uuml;tzen Sie liebevoll und routiniert
-    </p>
+    <x-page-title title="Vielfältigkeit" sub="Wir unterstützen Sie liebevoll und routiniert" />
 </section>
 
 @include('welcome.haushalt')

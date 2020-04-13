@@ -6,12 +6,7 @@
 <section class="mt-20 px-6 md:px-0 max-w-3xl mx-auto leading-relaxed text-gray-600">
     <div class="container">
         <div class="text-center md:text-left">
-            <h3 class="text-3xl leading-8 font-extrabold text-gray-800 sm:text-4xl sm:leading-10">
-                Kontakt
-            </h3>
-            <p class="uppercase text-green-600 font-bold text-sm -mt-4">
-                Wir sind gerne für Sie da
-            </p>
+            <x-page-title title="Kontakt" sub="Wir sind gerne für Sie da" />
 
             <p class="mb-8">
                 Sie haben hier die Möglichkeit, mit uns in Kontakt zu treten.
