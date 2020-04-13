@@ -213,7 +213,6 @@
                 <a href="{{ route('disclaimer') }}" title="Datenschutz" class="text-gray-400 hover:text-green-600">Datenschutz</a>
             </p>
         </div>
-
     </footer>
 
     <!-- Scripts -->
@@ -233,6 +232,7 @@
         });
     </script>
     @endif
+    @include('cookieConsent::index')
 </body>
 
 </html>
