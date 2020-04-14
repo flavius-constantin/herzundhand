@@ -54,7 +54,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 </head>
 
-<body class="min-h-screen text-gray-800 font-sans antialiased">
+<body class="relative min-h-screen text-gray-800 font-sans antialiased">
     <!-- Google Tag Manager (noscript) -->
     <noscript>
         <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KKCNWSZ" height="0" width="0" style="display:none;visibility:hidden"></iframe>
