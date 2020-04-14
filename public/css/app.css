@@ -6105,6 +6105,10 @@ pre code {
   opacity: 0.75;
 }
 
+.opacity-85 {
+  opacity: 0.85;
+}
+
 .opacity-100 {
   opacity: 1;
 }
@@ -6125,6 +6129,10 @@ pre code {
   opacity: 0.75;
 }
 
+.hover\:opacity-85:hover {
+  opacity: 0.85;
+}
+
 .hover\:opacity-100:hover {
   opacity: 1;
 }
@@ -6143,6 +6151,10 @@ pre code {
 
 .focus\:opacity-75:focus {
   opacity: 0.75;
+}
+
+.focus\:opacity-85:focus {
+  opacity: 0.85;
 }
 
 .focus\:opacity-100:focus {
@@ -20268,6 +20280,10 @@ pre code {
     opacity: 0.75;
   }
 
+  .sm\:opacity-85 {
+    opacity: 0.85;
+  }
+
   .sm\:opacity-100 {
     opacity: 1;
   }
@@ -20288,6 +20304,10 @@ pre code {
     opacity: 0.75;
   }
 
+  .sm\:hover\:opacity-85:hover {
+    opacity: 0.85;
+  }
+
   .sm\:hover\:opacity-100:hover {
     opacity: 1;
   }
@@ -20306,6 +20326,10 @@ pre code {
 
   .sm\:focus\:opacity-75:focus {
     opacity: 0.75;
+  }
+
+  .sm\:focus\:opacity-85:focus {
+    opacity: 0.85;
   }
 
   .sm\:focus\:opacity-100:focus {
@@ -34417,6 +34441,10 @@ pre code {
     opacity: 0.75;
   }
 
+  .md\:opacity-85 {
+    opacity: 0.85;
+  }
+
   .md\:opacity-100 {
     opacity: 1;
   }
@@ -34437,6 +34465,10 @@ pre code {
     opacity: 0.75;
   }
 
+  .md\:hover\:opacity-85:hover {
+    opacity: 0.85;
+  }
+
   .md\:hover\:opacity-100:hover {
     opacity: 1;
   }
@@ -34455,6 +34487,10 @@ pre code {
 
   .md\:focus\:opacity-75:focus {
     opacity: 0.75;
+  }
+
+  .md\:focus\:opacity-85:focus {
+    opacity: 0.85;
   }
 
   .md\:focus\:opacity-100:focus {
@@ -48566,6 +48602,10 @@ pre code {
     opacity: 0.75;
   }
 
+  .lg\:opacity-85 {
+    opacity: 0.85;
+  }
+
   .lg\:opacity-100 {
     opacity: 1;
   }
@@ -48586,6 +48626,10 @@ pre code {
     opacity: 0.75;
   }
 
+  .lg\:hover\:opacity-85:hover {
+    opacity: 0.85;
+  }
+
   .lg\:hover\:opacity-100:hover {
     opacity: 1;
   }
@@ -48604,6 +48648,10 @@ pre code {
 
   .lg\:focus\:opacity-75:focus {
     opacity: 0.75;
+  }
+
+  .lg\:focus\:opacity-85:focus {
+    opacity: 0.85;
   }
 
   .lg\:focus\:opacity-100:focus {
@@ -62715,6 +62763,10 @@ pre code {
     opacity: 0.75;
   }
 
+  .xl\:opacity-85 {
+    opacity: 0.85;
+  }
+
   .xl\:opacity-100 {
     opacity: 1;
   }
@@ -62735,6 +62787,10 @@ pre code {
     opacity: 0.75;
   }
 
+  .xl\:hover\:opacity-85:hover {
+    opacity: 0.85;
+  }
+
   .xl\:hover\:opacity-100:hover {
     opacity: 1;
   }
@@ -62753,6 +62809,10 @@ pre code {
 
   .xl\:focus\:opacity-75:focus {
     opacity: 0.75;
+  }
+
+  .xl\:focus\:opacity-85:focus {
+    opacity: 0.85;
   }
 
   .xl\:focus\:opacity-100:focus {
