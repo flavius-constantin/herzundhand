@@ -13,7 +13,24 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::view('/', 'welcome')->name('home');
-Route::view('/contact', 'contact')->name('contact');
-Route::view('/disclaimer', 'disclaimer')->name('disclaimer');
-Route::view('/imprint', 'imprint')->name('imprint');
+Route::view('/', 'welcome')
+    ->name('home');
+
+Route::livewire('/contact', 'contact-form')
+    ->name('contact')
+    ->layout('layouts.web', ['title' => 'Kontakt']);
+
+Route::view('/disclaimer', 'disclaimer')
+    ->name('disclaimer');
+
+Route::view('/imprint', 'imprint')
+    ->name('imprint');
+
+if(!app()->environment('production')) {
+    Route::get('/mailable', function() {
+        $contact = App\Contact::latest()->first();
+
+        return new App\Mail\ContactRequest($contact);
+    });
+    Route::get('/{page}', 'PagesController');
+}

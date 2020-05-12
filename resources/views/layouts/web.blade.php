@@ -52,6 +52,7 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,300i,400,400i,700,700i,800,800i" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <livewire:styles />
 </head>
 
 <body class="relative min-h-screen text-gray-800 font-sans antialiased">
@@ -232,6 +233,7 @@
         });
     </script>
     @endif
+    <livewire:scripts />
     @include('cookieConsent::index')
 </body>
 
