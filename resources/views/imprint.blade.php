@@ -2,15 +2,28 @@
 
 @section('title', 'Impressum')
 
+@section('header')
+<x-static-page-title title="Impressum" subtitle="Informationspflicht laut §5 E-Commerce Gesetz, §14 Unternehmensgesetzbuch, §63 Gewerbeordnung und Offenlegungspflicht laut §25 Mediengesetz">
+
+</x-static-page-title>
+@endsection
+
 @section('content')
 <section class="mt-20 px-6 md:px-0 max-w-3xl mx-auto leading-relaxed text-gray-600">
     <div class="container">
-        <x-page-title title="Impressum" sub="Informationspflicht laut §5 E-Commerce Gesetz, §14 Unternehmensgesetzbuch, §63 Gewerbeordnung und Offenlegungspflicht laut §25 Mediengesetz" />
+
+        <h3 class="text-xl font-extrabold text-gray-800  sm:text-2xl">
+            Angaben gem. §5 TMG
+        </h3>
         <ul class="list-none ml-6">
             <li><strong>{{ config('app.name') }}</strong></li>
             <li>Kirchrimbach 5</li>
             <li>96152 Burghaslach</li>
             <li>Deutschland</li>
+        </ul>
+
+        <ul class="list-none ml-6">
+            <li><strong>USt-IdNr.</strong> DE329079244</li>
         </ul>
 
         <ul class="list-none ml-6">
@@ -73,7 +86,7 @@
             Sollten Sie auf dieser Webseite Inhalte finden, die das Urheberrecht verletzen, bitten wir Sie uns zu kontaktieren.
         </p>
 
-            <!-- <hr>
+        <!-- <hr>
         <h3 class="text-xl font-extrabold text-gray-800  sm:text-2xl md:-mb-4 -mb-1">
             Bildernachweis
         </h3>

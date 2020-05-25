@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::view('/', 'welcome')
-    ->name('home');
+    ->name('welcome');
 
 Route::livewire('/contact', 'contact-form')
     ->name('contact')
@@ -25,6 +25,9 @@ Route::view('/disclaimer', 'disclaimer')
 
 Route::view('/imprint', 'imprint')
     ->name('imprint');
+
+Route::permanentRedirect('/status', 'https://status.herzundhand24.de')
+    ->name('status');
 
 if(!app()->environment('production')) {
     Route::get('/mailable', function() {

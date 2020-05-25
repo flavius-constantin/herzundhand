@@ -5,25 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-
-    <!-- Google Tag Manager -->
-    <script>
-        (function(w, d, s, l, i) {
-            w[l] = w[l] || [];
-            w[l].push({
-                'gtm.start': new Date().getTime(),
-                event: 'gtm.js'
-            });
-            var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s),
-                dl = l != 'dataLayer' ? '&l=' + l : '';
-            j.async = true;
-            j.src =
-                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-            f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-KKCNWSZ');
-    </script>
-    <!-- End Google Tag Manager -->
+    @include('includes.google._tagmanager')
 
     <!-- Title -->
     <title>{{ config('app.name', 'Laravel') }} &bull; @yield('title', 'Startseite')</title>
@@ -32,8 +14,8 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- SEO -->
-    @include('includes/_seo')
-    @include('includes/_favicon')
+    @include('includes._seo')
+    @include('includes._favicon')
 
     <!-- Styles -->
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
@@ -56,11 +38,7 @@
 </head>
 
 <body class="relative min-h-screen text-gray-800 font-sans antialiased">
-    <!-- Google Tag Manager (noscript) -->
-    <noscript>
-        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KKCNWSZ" height="0" width="0" style="display:none;visibility:hidden"></iframe>
-    </noscript>
-    <!-- End Google Tag Manager (noscript) -->
+    @include('includes.google._tagmanager-noscript')
 
     <header>
         <div x-data="{ open: false }" class="relative bg-white overflow-hidden">
@@ -70,11 +48,12 @@
                         <nav class="relative flex items-center justify-between sm:h-10 lg:justify-start">
                             <div class="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
                                 <div class="flex items-center justify-between w-full md:w-auto">
-                                    <a href="{{ route('home') }}">
-                                        <img class="h-8 w-auto sm:h-10" src="{{ asset('img/logo.jpg') }}" alt="{{ config('app.name') }} " />
+                                    <a href="{{ route('welcome') }}">
+                                        <img class="h-12 w-auto sm:h-16" src="{{ asset('img/logo.jpg') }}" alt="{{ config('app.name') }} " />
                                     </a>
                                     <div class="-mr-2 flex items-center md:hidden">
-                                        <button @click="open = true" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-green-600 hover:text-green-700 hover:bg-green-200 focus:outline-none focus:bg-green-200 focus:text-green-700 transition duration-150 ease-in-out">
+                                        <button @click="open = true" type="button" class="inline-flex items-center justify-center p-2 mr-2 rounded-md text-green-600 hover:text-green-700 hover:bg-green-200 focus:outline-none focus:bg-green-200 focus:text-green-700 transition duration-150 ease-in-out">
+                                            <span class="uppercase font-bold text-sm mr-2">Menü</span>
                                             <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                                             </svg>
@@ -84,8 +63,8 @@
                             </div>
 
                             <div class="hidden md:block md:ml-10 md:pr-4">
-                                <a href="#modell" class=" font-medium text-gray-600 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out">Das Modell</a>
-                                <a href="#vielfalt" class=" ml-8 font-medium text-gray-600 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out">Vielfältigkeit</a>
+                                <a href="{{ route('welcome') }}#modell" class=" font-medium text-gray-600 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out">Das Modell</a>
+                                <a href="{{ route('welcome') }}#vielfalt" class=" ml-8 font-medium text-gray-600 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out">Vielfältigkeit</a>
                                 <a href="{{ route('contact') }}" class="ml-8 font-medium text-green-600 hover:text-green-700 focus:outline-none focus:text-green-700 transition duration-150 ease-in-out">Kontakt</a>
                             </div>
                         </nav>
@@ -94,9 +73,9 @@
                     <div x-show="open" x-transition:enter="duration-150 ease-out" x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100" x-transition:leave="duration-100 ease-in" x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-95" class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
                         <div class="rounded-lg shadow-md">
                             <div class="rounded-lg bg-white shadow-xs overflow-hidden">
-                                <div class="px-5 pt-4 flex items-center justify-between">
+                                <div class="pr-5 pl-2 pt-4 flex items-center justify-between">
                                     <div>
-                                        <img class="h-8 w-auto" src="{{ asset('img/logo.jpg') }}" alt="{{ config('app.name') }} " />
+                                        <img class="h-12 w-auto" src="{{ asset('img/logo.jpg') }}" alt="{{ config('app.name') }} " />
                                     </div>
                                     <div class="-mr-2">
                                         <button @click="open = false" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-red-400 hover:text-red-500 hover:bg-red-100 focus:outline-none focus:bg-red-100 focus:text-red-500 transition duration-150 ease-in-out">
@@ -107,8 +86,8 @@
                                     </div>
                                 </div>
                                 <div class="px-2 pt-2 pb-3">
-                                    <a href="#modell" class=" block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:text-gray-900 focus:bg-gray-100 transition duration-150 ease-in-out">Das Modell</a>
-                                    <a href="#vielfalt" class=" mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:text-gray-900 focus:bg-gray-100 transition duration-150 ease-in-out">Vielfältigkeit</a>
+                                    <a href="{{ route('welcome') }}#modell" class=" block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:text-gray-900 focus:bg-gray-100 transition duration-150 ease-in-out">Das Modell</a>
+                                    <a href="{{ route('welcome') }}#vielfalt" class=" mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:text-gray-900 focus:bg-gray-100 transition duration-150 ease-in-out">Vielfältigkeit</a>
                                     <a href="{{ route('contact') }}" class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-green-600 hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:text-gray-900 focus:bg-gray-100 transition duration-150 ease-in-out">Kontakt</a>
                                 </div>
                             </div>
@@ -117,6 +96,9 @@
 
                     <div class="mt-10 mx-auto max-w-screen-xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
                         <div class="text-center sm:text-left sm:max-w-xl sm:mx-auto">
+                            @if(!request()->routeIs('welcome'))
+                            @yield('header')
+                            @else
                             <h2 class="text-4xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-5xl sm:leading-none md:text-6xl">
                                 Herzlich
                                 <br class="xl:hidden" />
@@ -127,6 +109,8 @@
                                 Wenn Pflegebedürftige Menschen rund um die Uhr im eigenen Zuhause
                                 betreut werden, nennt man dies „24 Stunden Betreuung“
                             </p>
+                            @endif
+
                             <!-- <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                                 <div class="rounded-md shadow">
                                     <a href="#" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white hover:text-white bg-green-600 hover:bg-green-500 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10">
@@ -209,6 +193,8 @@
             </p>
 
             <p class="w-1/2">
+                <a href="{{ route('status') }}" target="_new" title="Status Page" class="text-gray-400 hover:text-green-600">Status</a>
+                &bull;
                 <a href="{{ route('imprint') }}" title="Impressum" class="text-gray-400 hover:text-green-600">Impressum</a>
                 &bull;
                 <a href="{{ route('disclaimer') }}" title="Datenschutz" class="text-gray-400 hover:text-green-600">Datenschutz</a>

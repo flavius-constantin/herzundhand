@@ -2,18 +2,20 @@
 
 @section('title', 'Datenschutz')
 
+@section('header')
+<x-static-page-title title="Datenschutz" subtitle="Weil uns die Sicherheit Ihrer Daten am Herzen liegt">
+    Es liegt in der Natur der Sache, dass diese Erklärungen sehr technisch klingen,
+    wir haben uns bei der Erstellung jedoch bemüht die wichtigsten Dinge so einfach und klar wie möglich zu beschreiben.
+</x-static-page-title>
+@endsection
+
 @section('content')
 <section class="mt-20 px-6 md:px-0 max-w-3xl mx-auto leading-relaxed text-gray-600">
     <div class="container">
-        <x-page-title title="Datenschutzerklärung" sub="Weil uns die Sicherheit Ihrer Daten am Herzen liegt" />
         <p>
             Wir haben diese Datenschutzerklärung (Fassung 02.04.2020-311166606) verfasst,
             um Ihnen gemäß der Vorgaben der <a href="https://eur-lex.europa.eu/legal-content/DE/ALL/?uri=celex%3A32016R0679&tid=311166606" target="_blank">Datenschutz-Grundverordnung (EU) 2016/679</a> zu erklären,
             welche Informationen wir sammeln, wie wir Daten verwenden und welche Entscheidungsmöglichkeiten Sie als Besucher dieser Webseite haben.
-        </p>
-        <p>
-            Leider liegt es in der Natur der Sache, dass diese Erklärungen sehr technisch klingen,
-            wir haben uns bei der Erstellung jedoch bemüht die wichtigsten Dinge so einfach und klar wie möglich zu beschreiben.
         </p>
 
         @include('disclaimer.cookies')
