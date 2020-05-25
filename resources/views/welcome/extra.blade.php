@@ -39,7 +39,7 @@
                     schnelle Vermittlung
                 </h5>
                 <p class="mt-2 mb-4 text-gray-500">
-                    Trotz der Entfernung und den Grenzen die zwischen einem unserer Pflegeengel und dem Klienten liegen, gelingt es uns in der Regel, mit einem Auftrag <span class="underline font-bold">binnend 7 Tagen</span> zu beginnen.
+                    Trotz der Entfernung und den Grenzen die zwischen einem unserer Pflegeengel und dem Klienten liegen, gelingt es uns in der Regel, mit einem Auftrag <span class="underline font-bold">binnen 7 Tagen</span> zu beginnen.
                 </p>
             </div>
             <div class="w-full lg:w-4/12 px-4 text-center">
