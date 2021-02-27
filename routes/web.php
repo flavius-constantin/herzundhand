@@ -29,8 +29,8 @@ Route::view('/imprint', 'imprint')
 Route::permanentRedirect('/status', 'https://status.herzundhand24.de')
     ->name('status');
 
-if(!app()->environment('production')) {
-    Route::get('/mailable', function() {
+if (! app()->environment('production')) {
+    Route::get('/mailable', function () {
         $contact = App\Contact::latest()->first();
 
         return new App\Mail\ContactRequest($contact);
